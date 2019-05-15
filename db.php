@@ -3,7 +3,7 @@
 // Database instellingen
 
 $dbhost = "localhost";
-$dbname = "mus";
+$dbname = "leden";
 $dbuser = "root";
 $dbpassw = "";
 

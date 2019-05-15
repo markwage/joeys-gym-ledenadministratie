@@ -9,10 +9,10 @@ include ("header.php");
 
 ?>
 <div id="main">		
-	<h1>Urenregistratie</h1>
-	<p>Dit is de urenregistratie van Mirage Automatisering BV. 
+	<h1>Ledenadministratie</h1>
+	<p>Dit is ledenadministratie van JOEY'S GYM. 
 	Heb je een account dan kun je inloggen. 
-	Zo niet dan kun je een account aanvragen via het contactformulier.</p>
+	Zo niet dan kun je een account aanvragen via het contactformulier indien je denkt dat je daar recht op hebt.</p>
 			
 <?php
 // Indien het Login form is submitted
@@ -48,8 +48,8 @@ if (isset($_POST['submit'])) {
 			$_POST['username'] = stripslashes($_POST['username']);
 			//$hour = time() + 3600;
 			$hour = time() + 36000;
-			setcookie('ID_mus', $_POST['username'], $hour);
-			setcookie('Key_mus', $_POST['pass'], $hour);
+			setcookie('ID_leden', $_POST['username'], $hour);
+			setcookie('Key_leden', $_POST['pass'], $hour);
 			$_SESSION['username'] = $_POST['username'];
 			$_SESSION['admin']    = $_POST['admin'];
 			$_SESSION['voornaam'] = $_POST['voornaam'];

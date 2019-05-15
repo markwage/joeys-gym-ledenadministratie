@@ -24,14 +24,14 @@ check_cookies();
 <link rel="stylesheet" href="./css/style.css" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<title>Mirage urenregistratie</title>
+<title>JOEYS GYM ledenadministratie</title>
 </head>
 <body>
 <!-- wrap starts here -->
 <div id="wrap">
 	<div id="header"><div id="header-content">	
-		<h1 id="logo"><a href="index.html" title=""><span class="gray">M</span>irage<span class="gray">us</span></a></h1>	
-		<h2 id="slogan">Mirage Urenregistratie Systeem...</h2>		
+		<h1 id="logo"><a href="index.html" title="">JOEYS GYM</a></h1>	
+		<h2 id="slogan">JOEYS GYM ledenadministratie...</h2>		
 		
 		<!-- TopMenu Tabs -->
 		<?php include ("./menu_top.php") ?>
@@ -40,54 +40,98 @@ check_cookies();
 	
 	<!-- content-wrap starts here -->
 	<div id="content-wrap"><div id="content">		
-		<div id="sidebar" ><?php include ("./menu_links.php") ?></div>	
-		<div id="main">		
-			<h1>Mirage Urenadministratie</h1>
-			<?php 
-			displayUserGegevens();
-			$sql_select = "SELECT * FROM uren where user='".$username."' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10";
-			writelogrecord("index","Query: ".$sql_select);
-			if($sql_result = mysqli_query($dbconn, $sql_select)) {
-			    writelogrecord("index","Totaal aantal rijen uit de select-query: ".mysqli_num_rows($sql_result));
-			    if(mysqli_num_rows($sql_result) > 0) {
-			        echo "<center><table>";
-			        echo "<tr>";
-			            echo "<th colspan='6' style='text-align:center;'>Overzicht laatste 10 ingevulde weken</th>";
-			        echo "</tr>";
-			        echo "<tr>";
-                        echo "<th>jaar</th>";
-                        echo "<th>week</th>";
-                        echo "<th>Ter approval<br />aangeboden</th>";
-                        echo "<th>Approved</th>";
-                        echo "<th>datum</th>";
-                        echo "<th>approved door</th>";
-                    echo "</tr>";
-			        $rowcolor = 'row-a';
-			        while($row_selecturen = mysqli_fetch_array($sql_result)) {
-			            $qry_jaar                  = $row_selecturen['jaar'];
-			            $qry_week                  = $row_selecturen['week'];
-			            $qry_terapprovalaangeboden = $row_selecturen['terapprovalaangeboden'];
-			            $qry_approved              = $row_selecturen['approved'];
-			            $qry_approveddatum         = $row_selecturen['approveddatum'];
-			            $qry_approvedbyuser        = $row_selecturen['approvedbyuser'];
-			            echo '<tr class="'.$rowcolor.'">';
-			                echo '<td style="text-align:center;">'.$qry_jaar.'</td>';
-			                echo '<td style="text-align:center;">'.$qry_week.'</td>';
-			                echo '<td style="text-align:center;">'.$qry_terapprovalaangeboden.'</td>';
-			                echo '<td style="text-align:center;">'.$qry_approved.'</td>';
-			                echo '<td>'.$qry_approveddatum.'</td>';
-                            echo '<td>'.$qry_approvedbyuser.'</td>';
-			            echo '</tr>';
-			            if ($rowcolor == 'row-a') $rowcolor = 'row-b';
-			            else $rowcolor = 'row-a';
-			        }
-			        echo "</table>";
-			    } else {
-			        echo "Er zijn geen records gevonden";
-			    }
-			} else {
-			    echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
-			}
+	<div id="sidebar" ><?php include ("./menu_links.php") ?></div>	
+	<div id="main">		
+		<h1>Statistieken JOEY'S GYM</h1>
+		<?php
+		$rowcolor = 'row-a';
+		echo "<center><table>";
+		    echo "<tr><th colspan='2' style='text-align:center;'>Statistieken leden JOEY'S GYM</th></tr>";
+		    //Totaal aantal aktieve leden
+		    $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL;";
+		    if($sql_result = mysqli_query($dbconn, $sql_select)) {
+		        $cnt_aktieveLeden = mysqli_num_rows($sql_result);
+		    } else {
+		        echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
+		    }
+		    //Aantal leden die geen contributie betalen
+		    $sql_select = "SELECT * FROM leden WHERE geenContributie = '1';";
+		    if($sql_result = mysqli_query($dbconn, $sql_select)) {
+		        $cnt_geenContributie = mysqli_num_rows($sql_result);
+		    } else {
+		        echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
+		    }
+		    //Aantal uitgeschreven leden
+		    $sql_select = "SELECT * FROM leden WHERE uitschrijfdatum IS NOT NULL";
+		    if($sql_result = mysqli_query($dbconn, $sql_select)) {
+		        $cnt_uitgeschreven = mysqli_num_rows($sql_result);
+		    } else {
+		        echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
+		    }
+		
+			echo "<tr class='".$rowcolor."'>";
+			    echo "<td>Aantal aktieve leden</td><td>".$cnt_aktieveLeden."</td>";
+            echo "</tr>";
+            if ($rowcolor == 'row-a') $rowcolor = 'row-b';
+            else $rowcolor = 'row-a';
+            echo '<tr class="'.$rowcolor.'">';
+                echo "<td>Aantal leden die geen contributie betalen</td><td style='text-align:right;'>".$cnt_geenContributie."</td>";
+            echo "</tr>";
+            if ($rowcolor == 'row-a') $rowcolor = 'row-b';
+            else $rowcolor = 'row-a';
+            echo '<tr class="'.$rowcolor.'">';
+                echo "<td>Totaal aantal uitgeschreven leden</td><td style='text-align:right;'>".$cnt_uitgeschreven."</td>";
+            echo "</tr>";
+        echo "</table></center>";
+        
+        $rowcolor = 'row-a';
+        echo "<br /><center><table>";
+            echo "<tr><th colspan='2' style='text-align:center;'>Leden per soort abonnement</th></tr>";
+            $sql_select = "SELECT * FROM leden WHERE abonnement = 1";
+            if($sql_result = mysqli_query($dbconn, $sql_select)) {
+                $cnt_onbeperktMaand = mysqli_num_rows($sql_result);
+            } else {
+                echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
+            }
+            $sql_select = "SELECT * FROM leden WHERE abonnement = 2";
+            if($sql_result = mysqli_query($dbconn, $sql_select)) {
+                $cnt_eenmaalWeek = mysqli_num_rows($sql_result);
+            } else {
+                echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
+            }
+            $sql_select = "SELECT * FROM leden WHERE abonnement = 3";
+            if($sql_result = mysqli_query($dbconn, $sql_select)) {
+                $cnt_strippenkaart = mysqli_num_rows($sql_result);
+            } else {
+                echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
+            }
+            $sql_select = "SELECT * FROM leden WHERE abonnement = 4";
+            if($sql_result = mysqli_query($dbconn, $sql_select)) {
+                $cnt_personaltraining = mysqli_num_rows($sql_result);
+            } else {
+                echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
+            }
+            
+            echo "<tr class='".$rowcolor."'>";
+            echo "<td>Onbeperkt maand</td><td style='text-align:right;'>".$cnt_onbeperktMaand."</td>";
+            echo "</tr>";
+            if ($rowcolor == 'row-a') $rowcolor = 'row-b';
+            else $rowcolor = 'row-a';
+            echo '<tr class="'.$rowcolor.'">';
+            echo "<td>Eenmaal per week</td><td style='text-align:right;'>".$cnt_eenmaalWeek."</td>";
+            echo "</tr>";
+            if ($rowcolor == 'row-a') $rowcolor = 'row-b';
+            else $rowcolor = 'row-a';
+            echo '<tr class="'.$rowcolor.'">';
+            echo "<td>Strippenkaart</td><td style='text-align:right;'>".$cnt_strippenkaart."</td>";
+            echo "</tr>";
+            if ($rowcolor == 'row-a') $rowcolor = 'row-b';
+            else $rowcolor = 'row-a';
+            echo '<tr class="'.$rowcolor.'">';
+            echo "<td>Personal Training</td><td style='text-align:right;'>".$cnt_personaltraining."</td>";
+            echo "</tr>";
+        echo "</table></center>";
+        
 			
 include ("footer.php");
 ?>	

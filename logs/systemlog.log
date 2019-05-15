@@ -1,0 +1,206 @@
+
+20190511 22:52:41;login;mwage;User mwage is succesvol ingelogd.
+20190511 22:52:41;index;mwage;Query: SELECT * FROM uren where user='mwage' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 22:52:56;index;mwage;Query: SELECT * FROM uren where user='mwage' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 22:52:58;index;mwage;Query: SELECT * FROM uren where user='mwage' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 22:53:11;index;mwage;Query: SELECT * FROM uren where user='mwage' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 22:53:54;index;mwage;Query: SELECT * FROM uren where user='mwage' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 23:05:15;index;;Query: SELECT * FROM uren where user='' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 23:05:40;login;mwage;User mwage is succesvol ingelogd.
+20190511 23:05:40;index;mwage;Query: SELECT * FROM uren where user='mwage' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 23:08:06;index;mwage;Query: SELECT * FROM uren where user='mwage' GROUP BY user, jaar, week ORDER BY jaar desc , week desc , datum desc LIMIT 10
+20190511 23:50:01;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190511 23:50:03;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:13:16;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:13:42;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:13:43;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:14:03;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:30:17;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:30:44;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:30:48;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:34:20;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:47:24;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:50:32;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:50:33;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:50:34;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:50:44;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:51:03;login;mwage;User mwage is succesvol ingelogd.
+20190512 00:51:03;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 00:53:59;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 01:12:29;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 01:12:35;login;mwage;User mwage is succesvol ingelogd.
+20190512 01:12:35;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 11:03:03;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190512 11:03:09;login;mwage;User mwage is succesvol ingelogd.
+20190512 11:03:09;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:20:20;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:20:28;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:55:06;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:55:13;login;mwage;User mwage is succesvol ingelogd.
+20190513 05:55:13;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:57:04;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:57:09;login;mwage;User mwage is succesvol ingelogd.
+20190513 05:57:09;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:57:38;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 05:58:45;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:22:11;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:22:15;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:22:16;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:29:46;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:30:45;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:40:07;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:40:49;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:43:29;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 06:45:11;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:42:29;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:43:20;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:43:22;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:43:23;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:43:23;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:51:59;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:52:04;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:52:04;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:52:06;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:52:11;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:52:15;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:52:25;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:52:30;login;mwage;User mwage is succesvol ingelogd.
+20190513 07:52:30;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:57:22;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 07:59:56;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 08:00:14;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 08:38:10;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 08:53:12;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 08:54:02;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 08:54:41;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 10:03:24;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 10:03:25;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 10:03:26;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 10:03:27;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:05:29;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:10:00;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:10:03;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:10:05;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:10:06;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:10:07;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:10:13;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:10:24;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:12:56;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:17:16;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:17:20;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:17:29;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:17:38;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:17:41;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:18:02;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:18:06;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:18:11;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 11:18:13;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 12:51:10;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 12:51:12;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 13:32:19;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 13:32:22;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 13:32:25;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 13:41:31;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 13:41:47;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 13:41:50;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 13:47:20;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 18:41:32;index;;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 18:41:40;login;mwage;User mwage is succesvol ingelogd.
+20190513 18:41:40;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 18:43:05;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 18:45:12;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 18:59:47;index;mwage;Query: 
+20190513 19:01:08;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:02:19;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:02:21;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:02:22;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:02:22;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:02:22;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:02:23;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:02:23;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:05:28;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:07:55;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:09:14;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 19:20:09;index;mwage;Query: SELECT count(1) FROM leden WHERE geenContributie = '1' 
+20190513 19:48:14;login;mwage;User mwage is succesvol ingelogd.
+20190513 20:09:57;login;mwage;User mwage is succesvol ingelogd.
+20190513 20:12:43;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 20:26:01;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 20:39:59;login;mwage;User mwage is succesvol ingelogd.
+20190513 20:40:07;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 21:00:57;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190513 21:01:01;index;mwage;Query: SELECT * FROM leden ORDER BY achternaam
+20190514 05:16:28;login;mwage;User mwage is succesvol ingelogd.
+20190514 05:21:37;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 05:22:13;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 05:24:07;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 05:49:11;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 05:49:31;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 05:54:28;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 05:55:44;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 06:04:16;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 07:47:37;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 07:56:49;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 07:57:39;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 07:57:51;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 11:00:53;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 11:25:48;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 11:27:39;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:10:51;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:10:56;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:15:20;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:16:38;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:17:28;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:19:27;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:20:46;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:20:55;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:21:47;edit_users;mwage;SAVEBUTTON - Wachtwoorden worden gecontroleerd
+20190514 13:21:47;edit_users;mwage;CHECKFIELDS - Overige velden worden gecontroleerd
+20190514 13:21:57;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:22:35;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:22:48;leden;mwage;User  is succesvol verwijderd.
+20190514 13:22:48;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:22:51;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:26:43;leden;mwage;User  is succesvol verwijderd.
+20190514 13:26:44;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:27:00;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:27:05;leden;mwage;Lid  is succesvol verwijderd.
+20190514 13:27:05;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 13:47:54;leden;mwage;Lid  is succesvol verwijderd.
+20190514 13:47:54;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 19:43:16;login;mwage;User mwage is succesvol ingelogd.
+20190514 19:43:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 19:44:16;leden;mwage;Lid  is succesvol verwijderd.
+20190514 19:44:16;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 19:51:05;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 19:51:14;leden;mwage;Lid 4 is succesvol verwijderd.
+20190514 19:51:14;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 19:53:17;login;mwage;User mwage is succesvol ingelogd.
+20190514 19:53:22;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 19:56:34;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 19:56:40;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:10:40;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:12:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:12:50;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:15:01;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:15:33;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:18:38;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:33:55;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:41:31;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:44:18;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:48:52;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 20:48:58;edit_users;mwage;SAVEBUTTON - Wachtwoorden worden gecontroleerd
+20190514 21:01:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 21:02:07;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190514 21:08:39;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 06:47:51;login;mwage;User mwage is succesvol ingelogd.
+20190515 06:47:55;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 06:48:14;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 06:48:29;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 12:56:29;login;mwage;User mwage is succesvol ingelogd.
+20190515 12:56:34;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 13:00:34;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 13:01:13;login;mwage;User mwage is succesvol ingelogd.
+20190515 13:01:16;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 13:01:48;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190515 13:01:53;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;

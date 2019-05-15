@@ -32,12 +32,12 @@ function errormessage($error_header, $error_message) {
 // uitgevoerd.
 //------------------------------------------------------------------------
 function check_cookies() {
-	if(isset($_COOKIE['ID_mus'])) {
+	if(isset($_COOKIE['ID_leden'])) {
 		// Indien aanwezig word je naar de volgende page ge-redirect
 		include ("./db.php");
 	    $dbconn = mysqli_connect($dbhost, $dbuser, $dbpassw, $dbname);
-		$username = $_COOKIE['ID_mus'];
-		$pass = $_COOKIE['Key_mus'];
+		$username = $_COOKIE['ID_leden'];
+		$pass = $_COOKIE['Key_leden'];
 		$check = mysqli_query($dbconn, "SELECT * FROM users WHERE username = '$username'") or die(mysqli_error($dbconn));
 		while ($info = mysqli_fetch_array($check)) {
 			if ($pass != $info['password']) {
@@ -110,7 +110,7 @@ function cnv_dateToWeek($datum) {
 function writeLogRecord($phpProg, $logRecord) {
     if (isset($_SESSION['username'])) $username = $_SESSION['username'];
     else $username = "";
-    $fileName = "C:\\wamp64\\www\\mirage-urenregistratie-systeem\\logs\\systemlogMUS.log";
+    $fileName = "C:\\wamp64\\www\\joeys-gym-ledenadministratie\\logs\\systemlog.log";
     $datumlog = date('Ymd H:i:s');
     file_put_contents($fileName, PHP_EOL.$datumlog.";".$phpProg.";".$username.";".$logRecord, FILE_APPEND);
 }
@@ -132,7 +132,7 @@ function form_soorturen_fill($aktie) {
 // Stel de ingevulde gegevensin het scherm veilig zodat de velden gevuld worden
 // met de al ingevulde waarden bij het optreden van een error
 //------------------------------------------------------------------------
-function form_user_fill($btn_aktie) {
+function form_leden_fill($btn_aktie) {
     if ($btn_aktie == "save" || $btn_aktie == "toevoegen") {
         global $frm_username, $frm_pass, $frm_pass2, $frm_admin, $frm_voornaam, $frm_tussenvoegsel, $frm_achternaam,
         $frm_email, $frm_indienst, $formerror;

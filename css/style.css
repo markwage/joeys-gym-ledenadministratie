@@ -13,7 +13,7 @@ body {
 	right: 0;
 	margin: 0;
 	padding: 0;
-	font: normal 13px verdana, arial, sans-serif;
+	font: normal 16px verdana, arial, sans-serif;
 	color: black;
 	background: #FFF url(../img/bg.jpg) repeat-x;
 	text-align: center;
@@ -22,7 +22,7 @@ body {
 /* links */
 a { 
 	background: inherit; 
-	color: #72A545; 
+	color: #0454f4; 
 	text-decoration: none; 
 }
 a:hover { 
@@ -32,7 +32,7 @@ a:hover {
 }
 
 /* headers */
-h1, h2, h3 { font: bold verdana, arial, sans-serif; color: #118981; }
+h1, h2, h3 { font: bold verdana, arial, sans-serif; color: #01308e; }
 h1 { font-size: 24px; padding-bottom: 13px; }
 h2 { font-size: 20px; text-transform: uppercase; }
 h3 { font-size: 16px; padding-top: 10px; padding-bottom: 10px; }
@@ -61,11 +61,11 @@ acronym {
 blockquote {
 	margin: 15px; 	
 	padding: 0 0 0 20px;  	
-  	background-color: #FAFAFA; 
-	background-position: 8px 10px;
+  	/* background-color: #FAFAFA; */ 
+	/* background-position: 8px 10px; */
 	border: 1px solid #f2f2f2; 
-	border-left: 3px solid #13C3B7;  
-	font: 13px verdana, arial, sans-serif; 
+	border-left: 3px solid #0454f4;  
+	font: 16px verdana, arial, sans-serif; 
 	color: #666666;	
 }
 
@@ -78,22 +78,26 @@ th strong {
 	color: black;
 }
 th {
-	background: #13C3B7;
+	/* background: #13C3B7; */
+	background: #0454f4;
 	height: 20px;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	color: black;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: white;
 	text-align: left;
-	border-left: 1px solid #13C3B7;
+	/* border-left: 1px solid #13C3B7; */
 	/* border-bottom: solid 2px #FFF; */
 }
 tr {
 	/* height: 20px; */
 }
 td {
-	padding: 5px 5px 5px 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	/* padding-top: 5px; */
 	/* padding-bottom: 5px; */
 	/* border-left: 1px solid #FFE1C3; */
@@ -107,7 +111,7 @@ tr.row-a {
 	background: white;
 }
 tr.row-b {
-	background: #eafffd;
+	background: #e0ebff;
 }
 /* end - table */
 
@@ -116,7 +120,7 @@ form {
 	margin: 10px 15px;
 	padding: 0;
 	border: 1px solid #eafffd;
-	background-color: #eafffd;
+	background-color: #f2f2ff;
 }
 label {
 	display:block;
@@ -126,7 +130,7 @@ label {
 input {
 	padding: 5px 5px 5px 5px;
 	border: 1px solid #333;
-	font: normal 13px verdana, arial, sans-serif;
+	font: normal 16px verdana, arial, sans-serif;
 	/* color:#777; */
 	margin-bottom: 4px;
 }
@@ -137,7 +141,7 @@ input[type="checkbox"]{
 }
 
 input:focus {
-	background-color: #eafffd;
+	background-color: #ffffff;
 }
 /* Selects any <input> element that is read-only */
 /* Supported in Firefox with a prefix */
@@ -159,14 +163,14 @@ input[type=number]::-webkit-outer-spin-button {
 select {
 	padding: 5px 5px 5px 5px;
 	border: 1px solid #333;
-	font: normal 13px verdana, arial, sans-serif;
+	font: normal 16px verdana, arial, sans-serif;
 	/* color:#777; */
 	margin-bottom: 4px;
 }
 textarea {
 	width: 100%;
 	padding: 5px;
-	font: normal 13px verdana, arial, sans-serif;
+	font: normal 16px verdana, arial, sans-serif;
 	border: 1px solid #333;
 	min-height: 100px;
 	/* op commentaar ivm scrollbars overflow: hidden; */
@@ -182,7 +186,7 @@ textarea:focus {
 
 input.button {
 	margin-left: 5px;
-	font: bold 13px verdana, arial, sans-serif;
+	font: bold 16px verdana, arial, sans-serif;
 	background: #FFF url(../img/gradientbg.jpg) repeat-x;
 	padding: 5px 8px 5px 8px;
 	color: black;
@@ -261,11 +265,11 @@ input.button {
 	border-right: 1px solid #272727;
 }
 #header-content li a:hover {
-	background: #13C3B7;
+	background: #0454f4;
 	color: #FFF;
 }
 #header-content li a#current  {
-	background: #13C3B7;
+	background: #0454f4;
 	color: #FFF;
 }
 
@@ -299,6 +303,7 @@ input.button {
 	background: #F5F5F5;
 	border: 1px solid #EFEDED;
 	margin-bottom: 10px;
+	font-size: 13px;
 }
 
 /* sidebar menu */
@@ -310,6 +315,7 @@ input.button {
 }
 #sidebar ul.sidemenu li {
 	padding: 0px 10px;
+	font-size: 13px;
 }
 #sidebar ul.sidemenu a {
 	display:block;
@@ -326,7 +332,7 @@ input.button {
 }
 #sidebar ul.sidemenu a:hover {
 	padding: .3em 0 .3em 10px;
-	border-left: 5px solid  #0c726b;
+	border-left: 5px solid  #0454f4;
 	color: #0c726b;		
 }
 
@@ -336,7 +342,7 @@ input.button {
 	width: 78%;	
 	margin: 0 0 10px 0; padding: 0;	
 	border: 2px solid;
-	border-color: #0c726b;
+	border-color: #0454f4;
 }
 #main h1 {
 	padding: 10px 0px 13px 5px;
@@ -356,7 +362,7 @@ input.button {
 	background-position: 8px 10px;
 	border: 1px solid #f2f2f2;
 	border-left: 3px solid red;
-	font: 13px verdana, arial, sans-serif;
+	font: 16px verdana, arial, sans-serif;
 	color: red;
 }
 
@@ -367,7 +373,7 @@ input.button {
 	background-position: 8px 10px;
 	border: 1px solid #f2f2f2;
 	border-left: 3px solid #0c726b;
-	font: 13px verdana, arial, sans-serif;
+	font: 16px verdana, arial, sans-serif;
 	font-weight: bold;
 }
 
@@ -379,6 +385,10 @@ input.button {
 	font: normal 11px/12px verdana, arial, sans-serif;
 	text-align: right;	width: 33%;
 	padding: 0 0 30px 0;
+}
+
+#footer a{
+	color: #0454f4;
 }
 
 /* additional classes */

@@ -6,7 +6,7 @@ if (!isset($_SESSION['admin'])) {
 	echo '<li><a href="login.php">Login</a></li>';
 }
 // Indien ingelogd is
-if (isset($_COOKIE['ID_mus'])) {
+if (isset($_COOKIE['ID_leden'])) {
 	echo '<li><a href="logout.php">Logout</a></li>';
 	echo '<li><a href="edit_users.php?aktie=edit&edtuser='.$_SESSION["username"].'">Profiel</a></li>';
 	echo "<li><a href='edit_nieuws.php?aktie=disp'>Nieuws</a></li>";
