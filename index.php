@@ -44,6 +44,7 @@ check_cookies();
 	<div id="main">		
 		<h1>Statistieken JOEY'S GYM</h1>
 		<?php
+		
 		$rowcolor = 'row-a';
 		echo "<center><table>";
 		    echo "<tr><th colspan='2' style='text-align:center;'>Statistieken leden JOEY'S GYM</th></tr>";
@@ -87,25 +88,25 @@ check_cookies();
         $rowcolor = 'row-a';
         echo "<br /><center><table>";
             echo "<tr><th colspan='2' style='text-align:center;'>Leden per soort abonnement</th></tr>";
-            $sql_select = "SELECT * FROM leden WHERE abonnement = 1";
+            $sql_select = "SELECT * FROM leden WHERE abonnementID = 1";
             if($sql_result = mysqli_query($dbconn, $sql_select)) {
                 $cnt_onbeperktMaand = mysqli_num_rows($sql_result);
             } else {
                 echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
             }
-            $sql_select = "SELECT * FROM leden WHERE abonnement = 2";
+            $sql_select = "SELECT * FROM leden WHERE abonnementID = 2";
             if($sql_result = mysqli_query($dbconn, $sql_select)) {
                 $cnt_eenmaalWeek = mysqli_num_rows($sql_result);
             } else {
                 echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
             }
-            $sql_select = "SELECT * FROM leden WHERE abonnement = 3";
+            $sql_select = "SELECT * FROM leden WHERE abonnementID = 3";
             if($sql_result = mysqli_query($dbconn, $sql_select)) {
                 $cnt_strippenkaart = mysqli_num_rows($sql_result);
             } else {
                 echo "ERROR: Could not be able to execute $sql_select. ". mysqli_error($dbconn);
             }
-            $sql_select = "SELECT * FROM leden WHERE abonnement = 4";
+            $sql_select = "SELECT * FROM leden WHERE abonnementID = 4";
             if($sql_result = mysqli_query($dbconn, $sql_select)) {
                 $cnt_personaltraining = mysqli_num_rows($sql_result);
             } else {
@@ -131,7 +132,6 @@ check_cookies();
             echo "<td>Personal Training</td><td style='text-align:right;'>".$cnt_personaltraining."</td>";
             echo "</tr>";
         echo "</table></center>";
-        
 			
 include ("footer.php");
 ?>	

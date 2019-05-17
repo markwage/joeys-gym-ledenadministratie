@@ -134,20 +134,25 @@ function form_soorturen_fill($aktie) {
 //------------------------------------------------------------------------
 function form_leden_fill($btn_aktie) {
     if ($btn_aktie == "save" || $btn_aktie == "toevoegen") {
-        global $frm_username, $frm_pass, $frm_pass2, $frm_admin, $frm_voornaam, $frm_tussenvoegsel, $frm_achternaam,
-        $frm_email, $frm_indienst, $formerror;
+        global $frm_lidnr, $frm_voornaam, $frm_tussenvoegsel, $frm_achternaam, $frm_adres, $frm_postcode,
+        $frm_woonplaats, $frm_telefoonnummer, $frm_emailadres, $frm_abonnementID, $frm_inschrijfdatum, 
+        $frm_uitschrijfdatum, $frm_geencontributie, $formerror;
         $formerror = 0;
-        $frm_username      = $_POST['username'];
-        $frm_pass          = $_POST['pass'];
-        $frm_pass2         = $_POST['pass2'];
-        if (isset($_POST['admin'])) $frm_admin = $_POST['admin'];
-        else $frm_admin = "";
-        $frm_voornaam      = $_POST['voornaam'];
-        $frm_tussenvoegsel = $_POST['tussenvoegsel'];
-        $frm_achternaam    = $_POST['achternaam'];
-        $frm_email         = $_POST['email'];
-        if (isset($_POST['indienst'])) $frm_indienst = $_POST['indienst'];
-        else $frm_indienst = "";
+        $frm_lidnr           = $_POST['lidID'];
+        $frm_voornaam        = $_POST['voornaam'];
+        $frm_tussenvoegsel   = $_POST['tussenvoegsel'];
+        $frm_achternaam      = $_POST['achternaam'];
+        $frm_adres           = $_POST['adres'];
+        $frm_postcode        = $_POST['postcode'];
+        $frm_woonplaats      = $_POST['woonplaats'];
+        $frm_telefoonnummer  = $_POST['telefoonnummer'];
+        $frm_emailadres      = $_POST['emailadres'];
+        $frm_abonnementID    = $_POST['abonnement'];
+        $frm_inschrijfdatum  = $_POST['inschrijfdatum'];
+        $frm_uitschrijfdatum = $_POST['uitschrijfdatum'];
+        //$frm_geencontributie = $_POST['geencontributie'];
+        if (isset($_POST['geencontributie'])) $frm_geencontributie = $_POST['geencontributie'];
+        else $frm_geencontributie = "";
     }
 }
 

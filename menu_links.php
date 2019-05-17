@@ -11,7 +11,7 @@ if (isset($_COOKIE['ID_leden'])) {
 	echo '<h1 class="clear">Ledenadministratie</h1>';
 	echo '<ul class="sidemenu">';
 	echo '<li><a href="leden.php?aktie=dispAktief">Overzicht aktieve leden</a></li>';
-	echo '<li><a href="leden.php?aktie=dispInaktief">Overzicht inaktieve leden</a></li>';
+	echo '<li><a href="leden.php?aktie=dispInaktief">Overzicht uitgeschreven leden</a></li>';
 	echo '<li><a href="leden.php?aktie=dispGeenContr">Leden zonder contributie</a></li>';
 	echo '<li><a href="edit_users.php?aktie=editprof&edtuser='.$_SESSION["username"].'">Mijn profiel</a></li>';
 	echo '</ul>';	
@@ -24,6 +24,7 @@ if (isset($_COOKIE['ID_leden'])) {
 		echo '<ul class="sidemenu">';
 		echo '<li><a href="betalingen.php?aktie=open">Openstaande betalingen</a></li>';
 		echo '<li><a href="betaalperiode.php">Nieuwe betaalperiode</a></li>';
+		echo '<li><a href="abonnementen.php">Abonnementen</a></li>';
 		echo '</ul>';	
 		echo '</div>';
 	//}

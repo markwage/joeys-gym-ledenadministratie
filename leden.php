@@ -51,11 +51,10 @@ if (isset($_POST['delete'])) {
 }
 
 //------------------------------------------------------------------------------------------------------
-// BUTTON Save
+// BUTTON Save (wijzigen bestaande lid) of submit (toevoegen nieuw lid)
 //------------------------------------------------------------------------------------------------------
-if (isset($_POST['save'])) {
+if ( (isset($_POST['save'])) || (isset($_POST['submit'])) ) {
     form_leden_fill('save');
-	//$formerror = 0;
 	if ((!$_POST['voornaam'] || $_POST['voornaam'] == "") && (!$formerror)) {
 		echo '<p class="errmsg"> ERROR: Voornaam is een verplicht veld</p>';
 		$focus     = 'voornaam';
@@ -66,73 +65,70 @@ if (isset($_POST['save'])) {
 		$focus     = 'achternaam';
 		$formerror = 1;
 	}
-	if (!$_POST['email'] && (!$formerror)) {
-		echo '<p class="errmsg"> ERROR: Email is een verplicht veld</p>';
-		$focus     = 'email';
-		$formerror = 1;
-	}
-	if ($_SESSION['admin'] && (!$formerror)) {
-		if (!isset($_POST['admin'])) {
-			$_POST['admin'] = 0;
-		}
-		else {
-			$_POST['admin'] = 1;
-		}
-		if (!isset($_POST['indienst'])) {
-			$_POST['indienst'] = 0;
-		}
-		else {
-			$_POST['indienst'] = 1;
-		}
-	}
+	if ((!isset($_POST['geencontributie'])) || $_POST['geencontributie'] == "") $frm_geencontributie = 0;
+	else $frm_geencontributie = 1;
 	
-	// here we encrypt the password and add slashes if needed
 	if (!$formerror) {
-	    writelogrecord("edit_users", "CREATEQRY1 - Beginnen met het aanmaken van de UPDATE query om user ".$_POST['username']."te updaten");
-	    $update = "UPDATE users SET ";
-	    if (!$_POST['pass'] == "") {
-	        $_POST['pass'] = md5($_POST['pass']);
-	        writelogrecord("edit_users", "PASS_MD5 - Wachtwoord is middels md5 encrypted");
-	        if (!get_magic_quotes_gpc()) {
-	            $_POST['pass'] = addslashes($_POST['pass']);
-	            $_POST['username'] = addslashes($_POST['username']);
-	        }
-	        $update .= "password='".$_POST['pass']."',";
+	    if (isset($_POST['save'])) { 
+	        $update = "UPDATE leden SET 
+	        voornaam = '".$_POST['voornaam']."',
+		    tussenvoegsel = '".$_POST['tussenvoegsel']."',
+		    achternaam = '".$_POST['achternaam']."',
+            adres = '".$_POST['adres']."',
+            postcode = '".$_POST['postcode']."',
+            woonplaats = '".$_POST['woonplaats']."',
+            telefoonnummer = '".$_POST['telefoonnummer']."',
+            emailadres = '".$_POST['emailadres']."',
+            abonnementID = ".$_POST['abonnement'].",";
+	        if((!isset($_POST['inschrijfdatum'])) || $_POST['inschrijfdatum'] == "") $update .= "inschrijfdatum = NULL,";
+	        else $update .= "inschrijfdatum = '".$_POST['inschrijfdatum']."',";
+	        writeLogRecord("leden","Waarde van uitschrijfdatum : *".$_POST['uitschrijfdatum']."*");
+	        if((!isset($_POST['uitschrijfdatum'])) || $_POST['uitschrijfdatum'] == "") $update .= "uitschrijfdatum = NULL,";
+	        else $update .= "uitschrijfdatum = '".$_POST['uitschrijfdatum']."',";
+            $update .= "geencontributie = '".$frm_geencontributie."' WHERE ID = ".$_POST['lidID'];
+	        writeLogRecord("leden","UPDQUERY UPDATE-query: ".$update);
+	        $check_upd_lid = mysqli_query($dbconn, $update);
 	    }
-	    
-	    $update .= "admin='".$_POST['admin']."',
-		voornaam='".$_POST['voornaam']."',
-		tussenvoegsel='".$_POST['tussenvoegsel']."',
-		achternaam='".$_POST['achternaam']."',
-		emailadres='".$_POST['email']."',
-		indienst='".$_POST['indienst']."' WHERE username = '".$_POST['username']."'";
-	    writeLogRecord("edit_users","UPDQUERY De UPDATE-query wordt nu uitgevoerd op de database voor user".$frm_username);
-	    $check_upd_user = mysqli_query($dbconn, $update);
-		if ($check_upd_user) { 
-			echo '<p class="infmsg">User <b>'.$_POST['username'].'</b> is gewijzigd</p>.';
-			$frm_username      = "";
-			$frm_pass          = "";
-			$frm_pass2         = "";
-			$frm_voornaam      = "";
-			$frm_tussenvoegsel = "";
-			$frm_achternaam    = "";
-			$frm_email         = "";
-		}
-		else {
-			echo '<p class="errmsg">Er is een fout opgetreden bij het toevoegen van de user. Probeer het nogmaals.<br />
-			Indien het probleem zich blijft voordoen neem dan contact op met de webmaster</p>';
-		}
-		header("location: leden.php?aktie=dispAktief"); 
+	    if (isset($_POST['submit'])) {
+	        if ((!isset($_POST['geencontributie'])) || $_POST['geencontributie'] == "") $frm_geencontributie = 0;
+	        else $frm_geencontributie = 1;
+	        writeLogRecord("leden","Waarde van geencontributie: ".$frm_geencontributie);
+	        $insert = "INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie)
+			VALUES ('".$_POST['voornaam']."',
+					'".$_POST['tussenvoegsel']."',
+					'".$_POST['achternaam']."',
+					'".$_POST['adres']."',
+                    '".$_POST['postcode']."',
+                    '".$_POST['woonplaats']."',
+                    '".$_POST['telefoonnummer']."',
+                    '".$_POST['emailadres']."',";
+                    //".$_POST['abonnement'].",";
+	        if((!isset($_POST['abonnement'])) || $_POST['abonnement'] == "Maak je keuze") $insert .= "NULL,";
+	        else $insert .= "'".$_POST['abonnement']."',";
+	        if((!isset($_POST['inschrijfdatum'])) || $_POST['inschrijfdatum'] == "") $insert .= "NULL,";
+	        else $insert .= "'".$_POST['inschrijfdatum']."',";
+	        if((!isset($_POST['uitschrijfdatum'])) || $_POST['uitschrijfdatum'] == "") $insert .= "NULL,";
+	        else $insert .= "'".$_POST['uitschrijfdatum']."',";
+                    $insert .= "'".$frm_geencontributie."')";
+	        writeLogRecord("leden","UPDQUERY INSERT-query: ".$insert);
+	        $check_insert_lid = mysqli_query($dbconn, $insert);
+	    }
 	}
+	header("location: leden.php?aktie=dispAktief");
 }
 
 //------------------------------------------------------------------------------------------------------
-// START Dit wordt uitgevoerd wanneer de user op Usermanagement heeft geklikt
-// Er wordt een lijst met de users getoond
+// START 
 //------------------------------------------------------------------------------------------------------
-if ($aktie == 'dispAktief') {
-    //$sql_select = "SELECT * FROM leden ORDER BY achternaam";
-    $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
+if (($aktie == 'dispAktief') || ($aktie == 'dispInaktief') || ($aktie == 'dispGeenContr')) {
+    if ($aktie == 'dispAktief') {
+        $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
+    } elseif ($aktie == 'dispInaktief') {
+        $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;";
+    } elseif ($aktie == 'dispGeenContr') {
+        $sql_select = "SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;";
+    }
     writelogrecord("index","Query: ".$sql_select);
     if($sql_result = mysqli_query($dbconn, $sql_select)) {
         //writelogrecord("index","Totaal aantal rijen uit de select-query: ".mysqli_num_rows($sql_result));
@@ -189,25 +185,31 @@ if ($aktie == 'dispAktief') {
 //------------------------------------------------------------------------------------------------------
 if ($aktie == 'edit' || $aktie == 'delete' || $aktie == 'toevoegen') {
     if($aktie != 'toevoegen') {
+        $frm_abonnementIDfilled = '';
 	    $lidID = $_GET['lidID'];
 	    $focus = "voornaam";
 	    $sql_dspleden = mysqli_query($dbconn, "SELECT * FROM leden WHERE ID = '$lidID'");
 	    while($row_dspleden = mysqli_fetch_array($sql_dspleden)) {
 	        // >>> uitvoeren fill_leden_form om onderstaande variabele te vullen??????
-	        $frm_lidnr          = $row_dspleden['ID'];
-		    $frm_voornaam       = $row_dspleden['voornaam'];
-		    $frm_tussenvoegsel  = $row_dspleden['tussenvoegsel'];
-		    $frm_achternaam     = $row_dspleden['achternaam'];
-		    $frm_adres          = $row_dspleden['adres'];
-		    $frm_postcode       = $row_dspleden['postcode'];
-		    $frm_woonplaats     = $row_dspleden['woonplaats'];
-		    $frm_telefoonnummer = $row_dspleden['telefoonnummer'];
-		    $frm_emailadres     = $row_dspleden['emailadres'];
-		    //if ($row_dspleden['admin'] == 1) $frm_admin = "checked";
-		    //else $frm_admin = "";
-		    //if ($row_dspuser['indienst'] == 1) $frm_indienst = "checked";
-		    //else $frm_indienst = "";
+	        $frm_lidnr                = $row_dspleden['ID'];
+		    $frm_voornaam             = $row_dspleden['voornaam'];
+		    $frm_tussenvoegsel        = $row_dspleden['tussenvoegsel'];
+		    $frm_achternaam           = $row_dspleden['achternaam'];
+		    $frm_adres                = $row_dspleden['adres'];
+		    $frm_postcode             = $row_dspleden['postcode'];
+		    $frm_woonplaats           = $row_dspleden['woonplaats'];
+		    $frm_telefoonnummer       = $row_dspleden['telefoonnummer'];
+		    $frm_emailadres           = $row_dspleden['emailadres'];
+		    $frm_abonnementIDfilled   = $row_dspleden['abonnementID'];
+		    $frm_inschrijfdatum       = $row_dspleden['inschrijfdatum'];
+		    $frm_uitschrijfdatum      = $row_dspleden['uitschrijfdatum'];
+		    $frm_geencontributieValue = $row_dspleden['geencontributie'];
 	    }
+	    if($frm_geencontributieValue == 1) $frm_geencontributie = "checked";
+	    else $frm_geencontributie = "";
+    } else {
+        $frm_abonnementIDfilled = '';
+        $frm_geencontributie = "";
     }
     ?>
 	<form name="leden" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -226,7 +228,7 @@ if ($aktie == 'edit' || $aktie == 'delete' || $aktie == 'toevoegen') {
 				<td><input type="text" name="achternaam" size="26" maxlength="35" value="<?php if (isset($frm_achternaam)) { echo $frm_achternaam; } ?>"></td>
 			</tr>
 		</table>
-		<hr>
+		
 		<table>
 			<tr>
 				<td><b>Adres</b></td><td><input type="text" name="adres" size="35" maxlength="35" value="<?php if (isset($frm_adres)) { echo $frm_adres; } ?>"></td>
@@ -244,17 +246,40 @@ if ($aktie == 'edit' || $aktie == 'delete' || $aktie == 'toevoegen') {
 				<td><b>Email</b></td>
 				<td><input type="text" name="emailadres" size="40" maxlength="60" value="<?php if (isset($frm_emailadres)) { echo $frm_emailadres; } ?>"></td>
 			</tr>
-			<!--  
 			<tr>
-				<td>In dienst</td>
-				<td><input type="checkbox" <?php if (!$_SESSION['admin']) { echo "checked disabled "; } ?>name="indienst" <?php { echo $frm_indienst; } ?>></td>
+				<td><b>Soort abonnement</b></td>
+				<td><select name=abonnement>
+					<?php
+				    if ($aktie == 'toevoegen') echo '<option>Maak je keuze</option>';
+				    if (($aktie == 'edit' || $aktie == 'delete') && ($frm_abonnementIDfilled == "")) echo '<option>Abonnement onbekend</option>';
+				    $sql_abonnement = mysqli_query($dbconn, "SELECT * FROM abonnement ORDER BY soortAbonnement");
+				    while($row_abonnement = mysqli_fetch_array($sql_abonnement)) {
+				        $frm_abonnementID    = $row_abonnement['ID'];
+				        $frm_soortAbonnement = $row_abonnement['soortAbonnement'];
+				        if ($frm_abonnementIDfilled == $frm_abonnementID) $optionSelected = 'selected';
+				        else $optionSelected = '';
+				        echo '<option '.$optionSelected.' value="'.$frm_abonnementID.'">'.$frm_soortAbonnement.'</option>';
+				    }
+				    ?>
+				</select></td>
 			</tr>
-			-->
+			<tr>
+				<td><b>Inschrijfdatum</b></td>
+				<td><input type="date" name="inschrijfdatum" value="<?php if (isset($frm_inschrijfdatum)) { echo $frm_inschrijfdatum; } ?>"></td>
+			</tr>
+			<tr>
+				<td><b>Uitschrijfdatum</b></td>
+				<td><input type="date" name="uitschrijfdatum" placeholder=" " value="<?php if (isset($frm_uitschrijfdatum)) { echo $frm_uitschrijfdatum; } ?>"></td>
+			</tr>
+			<tr>
+				<td><b>Betaalt geen contributie</b></td>
+				<td><input type="checkbox" name="geencontributie" <?php { echo $frm_geencontributie; } ?>></td>
+			</tr>
 		</table>
 		<br />
 		<?php if ($aktie == 'edit' || $aktie == 'editprof') echo '<input class="button" type="submit" name="save" value="save">'; ?>
 		<?php if ($aktie == 'delete') echo '<input class="button" type="submit" name="delete" value="delete" onClick="return confirmDelLid()">'; ?>
-		<?php if ($aktie == 'toevoegen') echo '<input class="button" type="submit" name="save" value="save">'; ?>
+		<?php if ($aktie == 'toevoegen') echo '<input class="button" type="submit" name="submit" value="submit">'; ?>
 		<input class="button" type="submit" name="cancel" value="cancel">
 		<!--  <input class="button" type="submit" name="save" value="save"> -->
 		</p>
