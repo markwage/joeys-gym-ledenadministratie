@@ -67,6 +67,8 @@ if ( (isset($_POST['save'])) || (isset($_POST['submit'])) ) {
 	}
 	if ((!isset($_POST['geencontributie'])) || $_POST['geencontributie'] == "") $frm_geencontributie = 0;
 	else $frm_geencontributie = 1;
+	if ((!isset($_POST['sleutel'])) || $_POST['sleutel'] == "") $frm_sleutel = 0;
+	else $frm_sleutel = 1;
 	
 	if (!$formerror) {
 	    if (isset($_POST['save'])) { 
@@ -85,16 +87,18 @@ if ( (isset($_POST['save'])) || (isset($_POST['submit'])) ) {
 	        writeLogRecord("leden","Waarde van uitschrijfdatum : *".$_POST['uitschrijfdatum']."*");
 	        if((!isset($_POST['uitschrijfdatum'])) || $_POST['uitschrijfdatum'] == "") $update .= "uitschrijfdatum = NULL,";
 	        else $update .= "uitschrijfdatum = '".$_POST['uitschrijfdatum']."',";
-            $update .= "geencontributie = '".$frm_geencontributie."' WHERE ID = ".$_POST['lidID'];
+            $update .= "geencontributie = '".$frm_geencontributie."', sleutel = '".$frm_sleutel."' WHERE ID = ".$_POST['lidID'];
 	        writeLogRecord("leden","UPDQUERY UPDATE-query: ".$update);
 	        $check_upd_lid = mysqli_query($dbconn, $update);
 	    }
 	    if (isset($_POST['submit'])) {
 	        if ((!isset($_POST['geencontributie'])) || $_POST['geencontributie'] == "") $frm_geencontributie = 0;
 	        else $frm_geencontributie = 1;
+	        if ((!isset($_POST['sleutel'])) || $_POST['sleutel'] == "") $frm_sleutel = 0;
+	        else $frm_sleutel = 1;
 	        writeLogRecord("leden","Waarde van geencontributie: ".$frm_geencontributie);
 	        $insert = "INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
-            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie)
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
 			VALUES ('".$_POST['voornaam']."',
 					'".$_POST['tussenvoegsel']."',
 					'".$_POST['achternaam']."',
@@ -104,13 +108,14 @@ if ( (isset($_POST['save'])) || (isset($_POST['submit'])) ) {
                     '".$_POST['telefoonnummer']."',
                     '".$_POST['emailadres']."',";
                     //".$_POST['abonnement'].",";
-	        if((!isset($_POST['abonnement'])) || $_POST['abonnement'] == "Maak je keuze") $insert .= "NULL,";
+	        if((!isset($_POST['abonnement'])) || $_POST['abonnement'] == "Maak je keuze" || $_POST['abonnement'] == "Abonnement onbekend") $insert .= "NULL,";
 	        else $insert .= "'".$_POST['abonnement']."',";
 	        if((!isset($_POST['inschrijfdatum'])) || $_POST['inschrijfdatum'] == "") $insert .= "NULL,";
 	        else $insert .= "'".$_POST['inschrijfdatum']."',";
 	        if((!isset($_POST['uitschrijfdatum'])) || $_POST['uitschrijfdatum'] == "") $insert .= "NULL,";
 	        else $insert .= "'".$_POST['uitschrijfdatum']."',";
-                    $insert .= "'".$frm_geencontributie."')";
+	        $insert .= "'".$frm_sleutel."',";
+            $insert .= "'".$frm_geencontributie."')";
 	        writeLogRecord("leden","UPDQUERY INSERT-query: ".$insert);
 	        $check_insert_lid = mysqli_query($dbconn, $insert);
 	    }
@@ -121,13 +126,15 @@ if ( (isset($_POST['save'])) || (isset($_POST['submit'])) ) {
 //------------------------------------------------------------------------------------------------------
 // START 
 //------------------------------------------------------------------------------------------------------
-if (($aktie == 'dispAktief') || ($aktie == 'dispInaktief') || ($aktie == 'dispGeenContr')) {
+if (($aktie == 'dispAktief') || ($aktie == 'dispInaktief') || ($aktie == 'dispGeenContr') || ($aktie == 'dispSleutel')) {
     if ($aktie == 'dispAktief') {
         $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
     } elseif ($aktie == 'dispInaktief') {
         $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;";
     } elseif ($aktie == 'dispGeenContr') {
         $sql_select = "SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;";
+    } elseif ($aktie == 'dispSleutel') {
+        $sql_select = "SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;";
     }
     writelogrecord("index","Query: ".$sql_select);
     if($sql_result = mysqli_query($dbconn, $sql_select)) {
@@ -163,9 +170,9 @@ if (($aktie == 'dispAktief') || ($aktie == 'dispInaktief') || ($aktie == 'dispGe
                 echo '<td>'.$postcode.'</td>';
                 echo '<td>'.$woonplaats.'</td>';
                 echo '<td>'.$telefoon.'</td>';
-                echo '<td><a href="leden.php?aktie=edit&lidID='.$lidID.'"><img src="./img/buttons/icons8-edit-48.png" alt="wijzigen gegevens lid" title="wijzigen gegevens lid" /></a></td>';
-                echo '<td><a href="leden.php?aktie=delete&lidID='.$lidID.'"><img src="./img/buttons/icons8-delete-48.png" alt="verwijderen lid" title="verwijderen lid" /></a></td>';
-                echo '<td><a href="leden.php?aktie=toevoegen"><img src="./img/buttons/icons8-plus-48.png" alt="toevoegen nieuwe user" title="toevoegen nieuwe user" /></a></td>';
+                echo '<td class="button"><a href="leden.php?aktie=edit&lidID='.$lidID.'"><img src="./img/buttons/icons8-edit-48.png" alt="wijzigen gegevens lid" title="wijzigen gegevens lid" /></a></td>';
+                echo '<td class="button"><a href="leden.php?aktie=delete&lidID='.$lidID.'"><img src="./img/buttons/icons8-delete-48.png" alt="verwijderen lid" title="verwijderen lid" /></a></td>';
+                echo '<td class="button"><a href="leden.php?aktie=toevoegen"><img src="./img/buttons/icons8-plus-48.png" alt="toevoegen nieuwe user" title="toevoegen nieuwe user" /></a></td>';
                 echo '</tr>';
                 if ($rowcolor == 'row-a') $rowcolor = 'row-b';
                 else $rowcolor = 'row-a';
@@ -204,12 +211,16 @@ if ($aktie == 'edit' || $aktie == 'delete' || $aktie == 'toevoegen') {
 		    $frm_inschrijfdatum       = $row_dspleden['inschrijfdatum'];
 		    $frm_uitschrijfdatum      = $row_dspleden['uitschrijfdatum'];
 		    $frm_geencontributieValue = $row_dspleden['geencontributie'];
+		    $frm_sleutelValue         = $row_dspleden['sleutel'];
 	    }
 	    if($frm_geencontributieValue == 1) $frm_geencontributie = "checked";
 	    else $frm_geencontributie = "";
+	    if($frm_sleutelValue == 1) $frm_sleutel = "checked";
+	    else $frm_sleutel = "";
     } else {
         $frm_abonnementIDfilled = '';
-        $frm_geencontributie = "";
+        $frm_geencontributie    = "";
+        $frm_sleutel            = "";
     }
     ?>
 	<form name="leden" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -229,22 +240,26 @@ if ($aktie == 'edit' || $aktie == 'delete' || $aktie == 'toevoegen') {
 			</tr>
 		</table>
 		
-		<table>
+		<table style="width:100%;">
 			<tr>
-				<td><b>Adres</b></td><td><input type="text" name="adres" size="35" maxlength="35" value="<?php if (isset($frm_adres)) { echo $frm_adres; } ?>"></td>
+				<td style="width:26%;"><b>Adres</b></td><td><input type="text" name="adres" size="35" maxlength="35" value="<?php if (isset($frm_adres)) { echo $frm_adres; } ?>"></td>
 			</tr>
+		</table>
+		
+		<table style="width:100%;">
 			<tr>
-				<td><b>Postcode</b></td><td><input type="text" name="postcode" size="5" maxlength="7" value="<?php if (isset($frm_postcode)) { echo $frm_postcode; } ?>"></td>
+				<td style="width:26%;"><b>Postcode / Woonplaats</b></td>
+				<td style="width:4%;"><input type="text" name="postcode" size="5" maxlength="7" value="<?php if (isset($frm_postcode)) { echo $frm_postcode; } ?>"></td>
+				<td><input type="text" name="woonplaats" size="37" maxlength="40" value="<?php if (isset($frm_woonplaats)) { echo $frm_woonplaats; } ?>"></td>
 			</tr>
+		</table>
+		<table style="width:100%;">
 			<tr>
-				<td><b>Woonplaats</b></td><td><input type="text" name="woonplaats" size="35" maxlength="40" value="<?php if (isset($frm_woonplaats)) { echo $frm_woonplaats; } ?>"></td>
-			</tr>
-			<tr>
-				<td><b>Telefoonnummer</b></td><td><input type="text" name="telefoonnummer" size="11" maxlength="11" value="<?php if (isset($frm_telefoonnummer)) { echo $frm_telefoonnummer; } ?>"></td>
+				<td style="width:26%;"><b>Telefoonnummer</b></td><td><input type="text" name="telefoonnummer" size="11" maxlength="11" value="<?php if (isset($frm_telefoonnummer)) { echo $frm_telefoonnummer; } ?>"></td>
 			</tr>
 			<tr>
 				<td><b>Email</b></td>
-				<td><input type="text" name="emailadres" size="40" maxlength="60" value="<?php if (isset($frm_emailadres)) { echo $frm_emailadres; } ?>"></td>
+				<td><input type="text" name="emailadres" size="50" maxlength="60" value="<?php if (isset($frm_emailadres)) { echo $frm_emailadres; } ?>"></td>
 			</tr>
 			<tr>
 				<td><b>Soort abonnement</b></td>
@@ -263,17 +278,23 @@ if ($aktie == 'edit' || $aktie == 'delete' || $aktie == 'toevoegen') {
 				    ?>
 				</select></td>
 			</tr>
+		</table>
+		<table style="width:100%;">
 			<tr>
-				<td><b>Inschrijfdatum</b></td>
+				<td style="width:26%;"><b>Inschrijfdatum</b></td>
 				<td><input type="date" name="inschrijfdatum" value="<?php if (isset($frm_inschrijfdatum)) { echo $frm_inschrijfdatum; } ?>"></td>
-			</tr>
-			<tr>
 				<td><b>Uitschrijfdatum</b></td>
-				<td><input type="date" name="uitschrijfdatum" placeholder=" " value="<?php if (isset($frm_uitschrijfdatum)) { echo $frm_uitschrijfdatum; } ?>"></td>
+				<td><input type="date" name="uitschrijfdatum" value="<?php if (isset($frm_uitschrijfdatum)) { echo $frm_uitschrijfdatum; } ?>"></td>
+			</tr>
+		</table>
+		<table style="width:100%;">
+			<tr>
+				<td style="width:26%;"><b>Geen contributie</b></td>
+				<td><input type="checkbox" name="geencontributie" <?php { echo $frm_geencontributie; } ?>></td>
 			</tr>
 			<tr>
-				<td><b>Betaalt geen contributie</b></td>
-				<td><input type="checkbox" name="geencontributie" <?php { echo $frm_geencontributie; } ?>></td>
+				<td><b>Sleutel</b></td>
+				<td><input type="checkbox" name="sleutel" <?php { echo $frm_sleutel; } ?>></td>
 			</tr>
 		</table>
 		<br />

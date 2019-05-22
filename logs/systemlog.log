@@ -654,3 +654,165 @@
 20190517 15:29:56;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
 20190517 15:32:40;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
 20190517 15:32:42;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190517 15:37:12;login;mwage;User mwage is succesvol ingelogd.
+20190517 15:37:22;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190517 15:37:33;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:20:34;login;mwage;User mwage is succesvol ingelogd.
+20190520 05:20:37;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:36:24;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:36:26;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:36:27;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:36:28;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:36:30;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:36:34;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190520 05:36:35;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:39:00;login;mwage;User mwage is succesvol ingelogd.
+20190520 05:39:02;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:39:11;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190520 05:39:17;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190520 05:39:18;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190520 05:39:21;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:39:39;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 05:39:41;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190520 05:39:43;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190520 06:01:52;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 06:53:20;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190520 06:53:24;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190520 19:58:04;login;mwage;User mwage is succesvol ingelogd.
+20190521 12:27:20;login;mwage;User mwage is succesvol ingelogd.
+20190521 12:27:29;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 12:32:01;login;mwage;User mwage is succesvol ingelogd.
+20190521 12:32:03;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 12:35:54;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 12:50:58;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:00:10;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:02:19;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:18:54;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:19:10;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:19:34;login;mwage;User mwage is succesvol ingelogd.
+20190521 13:19:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:19:44;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:20:05;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:28:52;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:28:58;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:29:09;leden;mwage;Waarde van uitschrijfdatum : **
+20190521 13:29:09;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = Abonnement onbekend,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '1' WHERE ID = 3
+20190521 13:29:09;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:29:18;leden;mwage;Waarde van uitschrijfdatum : **
+20190521 13:29:18;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = Abonnement onbekend,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '1', sleutel = '0' WHERE ID = 3
+20190521 13:29:18;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:30:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:30:41;leden;mwage;Waarde van uitschrijfdatum : **
+20190521 13:30:41;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = Abonnement onbekend,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '1' WHERE ID = 3
+20190521 13:30:41;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:31:41;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:31:43;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:31:49;leden;mwage;Waarde van uitschrijfdatum : **
+20190521 13:31:49;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = Abonnement onbekend,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '1' WHERE ID = 3
+20190521 13:31:49;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:31:54;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:33:26;leden;mwage;Waarde van uitschrijfdatum : **
+20190521 13:33:26;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = 1,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '0' WHERE ID = 3
+20190521 13:33:26;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:33:33;leden;mwage;Waarde van uitschrijfdatum : **
+20190521 13:33:33;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = 1,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '1' WHERE ID = 3
+20190521 13:33:33;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:33:40;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:33:48;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:33:56;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:37:25;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:37:31;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:37:34;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:37:50;leden;mwage;Waarde van uitschrijfdatum : **
+20190521 13:37:50;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = 1,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '0' WHERE ID = 3
+20190521 13:37:50;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:55:11;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190521 13:55:21;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 05:14:19;login;mwage;User mwage is succesvol ingelogd.
+20190522 05:14:21;index;mwage;Query: SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;
+20190522 05:14:23;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 05:14:29;leden;mwage;Waarde van uitschrijfdatum : **
+20190522 05:14:29;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Lonnie',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Antwerpen',
+            adres = 'Nicolaasvicarie 21',
+            postcode = '4105 CL',
+            woonplaats = 'Culemborg',
+            telefoonnummer = '0622498852',
+            emailadres = 'antine001@hotmail.com',
+            abonnementID = 1,inschrijfdatum = '2019-01-01',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '1' WHERE ID = 3
+20190522 05:14:29;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 05:14:31;index;mwage;Query: SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;
+20190522 05:14:45;index;mwage;Query: SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;
+20190522 05:15:55;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 05:33:28;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 05:40:49;login;mwage;User mwage is succesvol ingelogd.
+20190522 10:00:11;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 10:03:49;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 10:20:08;index;mwage;Query: SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;
+20190522 10:20:14;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190522 10:20:29;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;

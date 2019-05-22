@@ -136,7 +136,7 @@ function form_leden_fill($btn_aktie) {
     if ($btn_aktie == "save" || $btn_aktie == "toevoegen") {
         global $frm_lidnr, $frm_voornaam, $frm_tussenvoegsel, $frm_achternaam, $frm_adres, $frm_postcode,
         $frm_woonplaats, $frm_telefoonnummer, $frm_emailadres, $frm_abonnementID, $frm_inschrijfdatum, 
-        $frm_uitschrijfdatum, $frm_geencontributie, $formerror;
+        $frm_uitschrijfdatum, $frm_geencontributie, $frm_sleutel, $formerror;
         $formerror = 0;
         $frm_lidnr           = $_POST['lidID'];
         $frm_voornaam        = $_POST['voornaam'];
@@ -153,6 +153,8 @@ function form_leden_fill($btn_aktie) {
         //$frm_geencontributie = $_POST['geencontributie'];
         if (isset($_POST['geencontributie'])) $frm_geencontributie = $_POST['geencontributie'];
         else $frm_geencontributie = "";
+        if (isset($_POST['sleutel'])) $frm_sleutel = $_POST['sleutel'];
+        else $frm_sleutel = "";
     }
 }
 

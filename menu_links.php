@@ -13,6 +13,7 @@ if (isset($_COOKIE['ID_leden'])) {
 	echo '<li><a href="leden.php?aktie=dispAktief">Overzicht aktieve leden</a></li>';
 	echo '<li><a href="leden.php?aktie=dispInaktief">Overzicht uitgeschreven leden</a></li>';
 	echo '<li><a href="leden.php?aktie=dispGeenContr">Leden zonder contributie</a></li>';
+	echo '<li><a href="leden.php?aktie=dispSleutel">Leden met een sleutel</a></li>';
 	echo '<li><a href="edit_users.php?aktie=editprof&edtuser='.$_SESSION["username"].'">Mijn profiel</a></li>';
 	echo '</ul>';	
 	echo '</div>';	
