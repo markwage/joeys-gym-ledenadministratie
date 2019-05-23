@@ -1,10 +1,10 @@
 <?php
 
 if (isset($_COOKIE['ID_leden'])) {
-	echo '<div class="sidebox">';
-	echo '<h1>Welkom</h1>';
-	echo "<p>Welkom <b>".$_SESSION['voornaam']."</b>.<br /> Je bent nu ingelogd op de ledenadministratie van JOEYS GYM.<br /></p>";			
-	echo '</div>';
+	//echo '<div class="sidebox">';
+	//echo '<h1>Welkom</h1>';
+	//echo "<p>Welkom <b>".$_SESSION['voornaam']."</b>.<br /> Je bent nu ingelogd op de ledenadministratie van JOEYS GYM.<br /></p>";			
+	//echo '</div>';
 	
 	// Menu voor updaten/onderhouden van de gewerkte uren
 	echo '<div class="sidebox">';	
@@ -25,7 +25,7 @@ if (isset($_COOKIE['ID_leden'])) {
 		echo '<ul class="sidemenu">';
 		echo '<li><a href="betalingen.php?aktie=open">Openstaande betalingen</a></li>';
 		echo '<li><a href="betaalperiode.php">Nieuwe betaalperiode</a></li>';
-		echo '<li><a href="abonnementen.php">Abonnementen</a></li>';
+		echo '<li><a href="abonnementen.php?aktie=disp">Abonnementen</a></li>';
 		echo '</ul>';	
 		echo '</div>';
 	//}

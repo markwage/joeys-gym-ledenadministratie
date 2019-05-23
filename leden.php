@@ -53,7 +53,7 @@ if (isset($_POST['delete'])) {
 //------------------------------------------------------------------------------------------------------
 // BUTTON Save (wijzigen bestaande lid) of submit (toevoegen nieuw lid)
 //------------------------------------------------------------------------------------------------------
-if ( (isset($_POST['save'])) || (isset($_POST['submit'])) ) {
+if ( (isset($_POST['save'])) || (isset($_POST['submit']))) {
     form_leden_fill('save');
 	if ((!$_POST['voornaam'] || $_POST['voornaam'] == "") && (!$formerror)) {
 		echo '<p class="errmsg"> ERROR: Voornaam is een verplicht veld</p>';
@@ -267,13 +267,13 @@ if ($aktie == 'edit' || $aktie == 'delete' || $aktie == 'toevoegen') {
 					<?php
 				    if ($aktie == 'toevoegen') echo '<option>Maak je keuze</option>';
 				    if (($aktie == 'edit' || $aktie == 'delete') && ($frm_abonnementIDfilled == "")) echo '<option>Abonnement onbekend</option>';
-				    $sql_abonnement = mysqli_query($dbconn, "SELECT * FROM abonnement ORDER BY soortAbonnement");
+				    $sql_abonnement = mysqli_query($dbconn, "SELECT * FROM abonnement ORDER BY soortabonnement");
 				    while($row_abonnement = mysqli_fetch_array($sql_abonnement)) {
 				        $frm_abonnementID    = $row_abonnement['ID'];
-				        $frm_soortAbonnement = $row_abonnement['soortAbonnement'];
+				        $frm_soortabonnement = $row_abonnement['soortabonnement'];
 				        if ($frm_abonnementIDfilled == $frm_abonnementID) $optionSelected = 'selected';
 				        else $optionSelected = '';
-				        echo '<option '.$optionSelected.' value="'.$frm_abonnementID.'">'.$frm_soortAbonnement.'</option>';
+				        echo '<option '.$optionSelected.' value="'.$frm_abonnementID.'">'.$frm_soortabonnement.'</option>';
 				    }
 				    ?>
 				</select></td>

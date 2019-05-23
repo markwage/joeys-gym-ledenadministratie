@@ -159,6 +159,19 @@ function form_leden_fill($btn_aktie) {
 }
 
 //------------------------------------------------------------------------
+// Vullen van de frm_variabelen voor invullen van abonnementen
+//------------------------------------------------------------------------
+function form_abonnement_fill($aktie) {
+    if ($aktie == "save" || $aktie == "toevoegen") {
+        global $frm_ID, $frm_soortomschrijving, $frm_bedrag, $formerror;
+        $formerror = 0;
+        $frm_ID              = $_POST['ID'];
+        $frm_soortabonnement = $_POST['soortabonnement'];
+        $frm_bedrag          = $_POST['bedrag'];
+    }
+}
+
+//------------------------------------------------------------------------
 // Controleer de ingevulde uren per Soortuur
 //------------------------------------------------------------------------
 function checkIngevuldeUrenPerSoort($ix1) {

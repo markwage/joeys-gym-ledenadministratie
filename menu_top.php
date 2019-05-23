@@ -1,13 +1,15 @@
 <?php 
 
 echo '<ul>';
-// echo '<li><a href="index.php">Home</a></li>';
+echo '<li><a href="index.php">Home</a></li>';
 if (!isset($_SESSION['admin'])) {
 	echo '<li><a href="login.php">Login</a></li>';
 }
 // Indien ingelogd is
 if (isset($_COOKIE['ID_leden'])) {
+    echo '<li><a href="logout.php">Logout</a></li>';
 ?>
+	<!-- 
 	<div class="navbar">
 		<a href="index.php">Home</a>
 		<div class="dropdown">
@@ -36,6 +38,7 @@ if (isset($_COOKIE['ID_leden'])) {
 			</div>
 		</div>
 	</div>
+	-->
 	<?php 	
 	// Indien de user admin-rechten heeft
 	// if ($_SESSION['admin']) {
