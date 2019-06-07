@@ -24,7 +24,7 @@ if (isset($_COOKIE['ID_leden'])) {
 		echo '<h1>Betalingen</h1>';
 		echo '<ul class="sidemenu">';
 		echo '<li><a href="betalingen.php?aktie=open">Openstaande betalingen</a></li>';
-		echo '<li><a href="betaalperiode.php">Nieuwe betaalperiode</a></li>';
+		echo '<li><a href="betaalperiode.php?aktie=disp">Betaalperioden</a></li>';
 		echo '<li><a href="abonnementen.php?aktie=disp">Abonnementen</a></li>';
 		echo '</ul>';	
 		echo '</div>';
