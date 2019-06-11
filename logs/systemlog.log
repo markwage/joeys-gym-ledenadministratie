@@ -314,3 +314,862 @@
 20190607 18:52:53;login;mwage;User mwage is succesvol ingelogd.
 20190607 18:56:20;index;mwage;Query: SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;
 20190607 18:56:24;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190607 19:53:10;betaalperiode;mwage;BTNSAVE Op save gedrukt om gewijzigd record op te slaan
+20190607 19:53:10;betaalperiode;mwage;UPDQUERY INSERT-query: INSERT INTO betaalperiode (betaalperiode)
+			VALUES ('201906')
+20190607 19:53:10;betaalperiode;mwage;Insert betaling voor betaalperiodeID: 15
+20190607 19:53:10;betaalperiode;mwage;Lidnr die toegevoegd zou worden aan betalingen: 2, betaalperiodeID 15 contributiebedrag 23.00
+20190607 19:53:10;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('2',
+                            '15',
+                            '23.00')
+20190607 19:53:10;betaalperiode;mwage;Lidnr die toegevoegd zou worden aan betalingen: 3, betaalperiodeID 15 contributiebedrag 23.00
+20190607 19:53:10;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('3',
+                            '15',
+                            '23.00')
+20190607 19:53:10;betaalperiode;mwage;Lidnr die toegevoegd zou worden aan betalingen: 7, betaalperiodeID 15 contributiebedrag 16.00
+20190607 19:53:10;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('7',
+                            '15',
+                            '16.00')
+20190607 19:54:59;betaalperiode;mwage;Er worden records uit betalingen verwijderd
+20190607 20:00:49;betaalperiode;mwage;BTNSAVE Op save gedrukt om gewijzigd record op te slaan
+20190607 20:00:49;betaalperiode;mwage;UPDQUERY INSERT-query: INSERT INTO betaalperiode (betaalperiode)
+			VALUES ('201906')
+20190607 20:00:49;betaalperiode;mwage;Insert betaling voor betaalperiodeID: 16
+20190607 20:00:49;betaalperiode;mwage;Lidnr die toegevoegd zou worden aan betalingen: 2, betaalperiodeID 16 contributiebedrag 23.00
+20190607 20:00:49;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('2',
+                            '16',
+                            '23.00')
+20190607 20:00:49;betaalperiode;mwage;Lidnr die toegevoegd zou worden aan betalingen: 3, betaalperiodeID 16 contributiebedrag 23.00
+20190607 20:00:49;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('3',
+                            '16',
+                            '23.00')
+20190607 20:00:49;betaalperiode;mwage;Lidnr die toegevoegd zou worden aan betalingen: 7, betaalperiodeID 16 contributiebedrag 16.00
+20190607 20:00:49;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('7',
+                            '16',
+                            '16.00')
+20190607 20:01:29;betaalperiode;mwage;Er worden 3 records uit betalingen verwijderd
+20190607 20:07:33;betaalperiode;mwage;BTNSAVE Op save gedrukt om gewijzigd record op te slaan
+20190607 20:07:33;betaalperiode;mwage;UPDQUERY INSERT-query: INSERT INTO betaalperiode (betaalperiode)
+			VALUES ('201906')
+20190607 20:07:33;betaalperiode;mwage;Insert betaling voor betaalperiodeID: 17
+20190607 20:07:33;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('2', '17', '23.00')
+20190607 20:07:33;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('3', '17', '23.00')
+20190607 20:07:33;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('7', '17', '16.00')
+20190611 08:05:46;login;mwage;User mwage is succesvol ingelogd.
+20190611 08:05:48;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:06:09;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190611 08:06:11;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190611 08:06:13;index;mwage;Query: SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;
+20190611 08:06:16;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:07:40;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:07:51;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:09:09;leden;mwage;Waarde van geencontributie: 0
+20190611 08:09:09;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Dennis',
+					'',
+					'Bosschaart',
+					'Achterstraat 10a',
+                    '4115 RP',
+                    'Asch',
+                    '0615173805',
+                    'dennisbos3@gmail.com','3','2019-04-15',NULL,'0','0')
+20190611 08:09:09;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:10:04;leden;mwage;Waarde van geencontributie: 0
+20190611 08:10:04;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Luka',
+					'',
+					'Brekelmans',
+					'',
+                    '',
+                    '',
+                    '',
+                    '','1','2018-11-01',NULL,'0','0')
+20190611 08:10:04;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:11:21;leden;mwage;Waarde van geencontributie: 0
+20190611 08:11:21;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Jens',
+					'van',
+					'Buuren',
+					'J. van Zantenstraat 7',
+                    '4112 LL',
+                    'Beusichem',
+                    '0648638846',
+                    'jvanbuuren15@gmail.com','1','2019-02-04',NULL,'0','0')
+20190611 08:11:21;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:12:24;leden;mwage;Waarde van geencontributie: 0
+20190611 08:12:24;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Elroy',
+					'',
+					'Copper',
+					'Hofplein 17',
+                    '4112 JV',
+                    'Beusichem',
+                    '0634354044',
+                    'elroycopper@outlook.com','1','2019-01-11',NULL,'0','0')
+20190611 08:12:24;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:13:16;leden;mwage;Waarde van geencontributie: 0
+20190611 08:13:16;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('M',
+					'',
+					'Denekamp',
+					'',
+                    '',
+                    '',
+                    '',
+                    '','1','2019-05-02',NULL,'0','0')
+20190611 08:13:16;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:14:33;leden;mwage;Waarde van geencontributie: 0
+20190611 08:14:33;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Anouk',
+					'',
+					'Denekamp',
+					'Zandweg 8',
+                    '4111 LH',
+                    'Zoelmond',
+                    '0641801463',
+                    'anoukdenekamp@live.nl','1','2018-07-29',NULL,'0','0')
+20190611 08:14:33;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:15:51;leden;mwage;Waarde van geencontributie: 0
+20190611 08:15:51;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Swen',
+					'',
+					'Denekamp',
+					'Achterstraat 10a',
+                    '4115 RP',
+                    'Asch',
+                    '0628967505',
+                    'swendenekamp@live.nl','3','2018-08-01',NULL,'0','0')
+20190611 08:15:51;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:16:35;leden;mwage;Waarde van geencontributie: 0
+20190611 08:16:35;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Maarten',
+					'van',
+					'Dijke',
+					'',
+                    '',
+                    '',
+                    '',
+                    '','1','2018-10-01',NULL,'0','0')
+20190611 08:16:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:17:15;leden;mwage;Waarde van geencontributie: 0
+20190611 08:17:15;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Michelle',
+					'',
+					'Dijkstra',
+					'',
+                    '',
+                    '',
+                    '',
+                    '','2','2019-05-01',NULL,'0','0')
+20190611 08:17:15;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:18:47;leden;mwage;Waarde van geencontributie: 0
+20190611 08:18:47;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Andre',
+					'van',
+					'Frankenhuyzen',
+					'Beusichemse Broeksteeg 1',
+                    '4112 PJ',
+                    'Beusichem',
+                    '0618974840',
+                    'andrevfrankenhuyzen@hotmail.com','1','2018-08-06',NULL,'0','0')
+20190611 08:18:47;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:20:04;leden;mwage;Waarde van geencontributie: 0
+20190611 08:20:04;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Leroy',
+					'van',
+					'Gent',
+					'Burgemeester de Bruynstraat 33',
+                    '4112 LC',
+                    'Beusichem',
+                    '0624845311l',
+                    'leroyvang@gmail.com','1','2018-10-28',NULL,'0','0')
+20190611 08:20:04;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:21:08;leden;mwage;Waarde van geencontributie: 0
+20190611 08:21:08;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Dylano',
+					'van',
+					'Gent',
+					'Burgemeester de Bruynstraat 33',
+                    '4112 LC',
+                    'Beusichem',
+                    '0624845310',
+                    'dylanovangent@gmail.com','1','2018-10-28',NULL,'0','0')
+20190611 08:21:08;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:21:33;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:21:58;betaalperiode;mwage;Er worden 3 records uit betalingen verwijderd
+20190611 08:22:05;betaalperiode;mwage;BTNSAVE Op save gedrukt om gewijzigd record op te slaan
+20190611 08:22:05;betaalperiode;mwage;UPDQUERY INSERT-query: INSERT INTO betaalperiode (betaalperiode)
+			VALUES ('201906')
+20190611 08:22:05;betaalperiode;mwage;Insert betaling voor betaalperiodeID: 18
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('2', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('3', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('7', '18', '16.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('11', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('12', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('13', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('14', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('15', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('17', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('18', '18', '16.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('19', '18', '23.00')
+20190611 08:22:05;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('20', '18', '23.00')
+20190611 08:22:06;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('21', '18', '23.00')
+20190611 08:57:43;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 08:58:12;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 09:28:21;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 10:14:30;leden;mwage;Waarde van uitschrijfdatum : **
+20190611 10:14:30;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Leroy',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Gent',
+            adres = 'Burg. de Bruynstraat 33',
+            postcode = '4112 LC',
+            woonplaats = 'Beusichem',
+            telefoonnummer = '0624845311l',
+            emailadres = 'leroyvang@gmail.com',
+            abonnementID = 1,inschrijfdatum = '2018-10-28',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '0' WHERE ID = 20
+20190611 10:14:30;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 10:14:42;leden;mwage;Waarde van uitschrijfdatum : **
+20190611 10:14:42;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Dylano',
+		    tussenvoegsel = 'van',
+		    achternaam = 'Gent',
+            adres = 'Burg. de Bruynstraat 33',
+            postcode = '4112 LC',
+            woonplaats = 'Beusichem',
+            telefoonnummer = '0624845310',
+            emailadres = 'dylanovangent@gmail.com',
+            abonnementID = 1,inschrijfdatum = '2018-10-28',uitschrijfdatum = NULL,geencontributie = '0', sleutel = '0' WHERE ID = 21
+20190611 10:14:42;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:05:13;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:06:31;leden;mwage;Waarde van geencontributie: 0
+20190611 11:06:31;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Max',
+					'',
+					'Geurts',
+					'Randweg 10',
+                    '4104 AC',
+                    'Culemborg',
+                    '0644827968',
+                    'max.geurts@hotmail.nl','1','2018-08-05',NULL,'0','0')
+20190611 11:06:31;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:07:28;leden;mwage;Waarde van geencontributie: 0
+20190611 11:07:28;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Bas',
+					'de',
+					'Groot',
+					'Anna van Burenstraat 10',
+                    '4110 EN',
+                    'Buren',
+                    '0628157384',
+                    'basdegroot75@gmail.com','1','2018-11-05',NULL,'0','0')
+20190611 11:07:28;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:08:39;leden;mwage;Waarde van geencontributie: 0
+20190611 11:08:39;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Pieter',
+					'de',
+					'Heus',
+					'Burg. Kuijkstraat 35',
+                    '4112 LH',
+                    'Beusichem',
+                    '0682470068',
+                    'p.deheus@outlook.com','1','2018-08-07',NULL,'0','0')
+20190611 11:08:39;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:09:49;leden;mwage;Waarde van geencontributie: 0
+20190611 11:09:49;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('PieterJan',
+					'de',
+					'Heus',
+					'Burg. Hommesstraat 88',
+                    '4112 LT',
+                    'Beusichem',
+                    '0638107700',
+                    'pjdeheus@hotmail.com','1','2018-07-18',NULL,'0','0')
+20190611 11:09:49;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:10:50;leden;mwage;Waarde van geencontributie: 0
+20190611 11:10:50;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Angela',
+					'',
+					'Kaldenberg',
+					'Waaldijk 170',
+                    '4171 CJ',
+                    'Herwijnen',
+                    '0613248939',
+                    'angela_kaldenberg@hotmail.com','4','2018-08-07',NULL,'0','0')
+20190611 11:10:50;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:11:12;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:12:13;leden;mwage;Waarde van geencontributie: 1
+20190611 11:12:13;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Sven',
+					'',
+					'Kamphuis',
+					'Zandweg 8',
+                    '4112 LH',
+                    'Zoelmond',
+                    '',
+                    '','1','2018-07-29',NULL,'0','1')
+20190611 11:12:13;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:12:17;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190611 11:12:21;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:12:32;leden;mwage;Waarde van uitschrijfdatum : **
+20190611 11:12:32;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Sven',
+		    tussenvoegsel = '',
+		    achternaam = 'Kamphuis',
+            adres = 'Zandweg 8',
+            postcode = '4112 LH',
+            woonplaats = 'Zoelmond',
+            telefoonnummer = '',
+            emailadres = '',
+            abonnementID = 1,inschrijfdatum = '2018-07-29',uitschrijfdatum = NULL,geencontributie = '1', sleutel = '0' WHERE ID = 27
+20190611 11:12:32;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:12:37;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190611 11:13:04;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:14:20;leden;mwage;Waarde van geencontributie: 0
+20190611 11:14:20;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Nicole',
+					'',
+					'Kruisbergen',
+					'Broderieperk 4',
+                    '4116 DN',
+                    'Buren',
+                    '0618106666',
+                    'nicole-kruisbergen@hotmail.com','3','2019-02-13',NULL,'0','0')
+20190611 11:14:20;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:15:29;leden;mwage;Waarde van geencontributie: 0
+20190611 11:15:29;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Janneke',
+					'',
+					'Laponder',
+					'Ottenhofstat 36',
+                    '4012 EB',
+                    'Kerk Avezaath',
+                    '0621435524',
+                    'janieke-laponder@hotmail.nl','1','2018-11-05',NULL,'0','0')
+20190611 11:15:29;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:17:05;leden;mwage;Waarde van geencontributie: 0
+20190611 11:17:05;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Colinde',
+					'',
+					'Laponder',
+					'Homoetsestraat 3d',
+                    '4021 HG',
+                    'Maurik',
+                    '0615632062',
+                    'colinde-laponder@hotmail.com','1','2018-11-05',NULL,'0','0')
+20190611 11:17:05;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:18:24;leden;mwage;Waarde van geencontributie: 0
+20190611 11:18:24;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Jules',
+					'',
+					'Losekoot',
+					'Achterstraat 3a',
+                    '4115 RP',
+                    '',
+                    '0614051609',
+                    'juleskoot@gmail.com','1','2019-03-26',NULL,'0','0')
+20190611 11:18:25;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:30:10;leden;mwage;Waarde van geencontributie: 0
+20190611 11:30:10;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Anthony',
+					'',
+					'Lubberts',
+					'J. Bosschaartstraat 4',
+                    '4112 LN',
+                    'Beusichem',
+                    '0345502732',
+                    'ron_myrna@hotmail.com','1','2019-02-08',NULL,'0','0')
+20190611 11:30:10;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:31:13;leden;mwage;Waarde van geencontributie: 0
+20190611 11:31:13;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Mike',
+					'',
+					'Maas',
+					'Provincialeweg 90',
+                    '5334 JJ',
+                    'Velddriel',
+                    '0630216178',
+                    'mike-maas@hotmail.com','3','2019-02-18',NULL,'0','0')
+20190611 11:31:13;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:32:08;leden;mwage;Waarde van geencontributie: 0
+20190611 11:32:08;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Kim',
+					'',
+					'Maree',
+					'Middelweg 48a',
+                    '4196 JJ',
+                    'Tricht',
+                    '0622544271',
+                    'kimmouree-@hotmail.com','3','2019-02-13',NULL,'0','0')
+20190611 11:32:08;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:33:08;leden;mwage;Waarde van geencontributie: 0
+20190611 11:33:08;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Dick',
+					'',
+					'Nout',
+					'Rijsbosch 4',
+                    '4112 ML',
+                    'Beusichem',
+                    '0645408094',
+                    'dicknout@hotmail.com','3','2018-08-06',NULL,'0','0')
+20190611 11:33:08;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:34:12;leden;mwage;Waarde van geencontributie: 0
+20190611 11:34:12;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Charles',
+					'van',
+					'Oort',
+					'De Engel',
+                    '4112 HD',
+                    'Beusichem',
+                    '0636194324',
+                    'charlesvanoort@hotmail.com','1','2018-08-08',NULL,'0','0')
+20190611 11:34:12;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:35:16;leden;mwage;Waarde van geencontributie: 0
+20190611 11:35:16;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Twan',
+					'',
+					'Regtien',
+					'Hendriklaan 1',
+                    '4112 KZ',
+                    'Beusichem',
+                    '0611115942',
+                    'tjcregtien@gmail.com','1','2018-08-08',NULL,'0','0')
+20190611 11:35:16;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:37:08;leden;mwage;Waarde van geencontributie: 0
+20190611 11:37:08;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Cheyenne',
+					'de',
+					'Rouw',
+					'Burg. Hommesstraat 88',
+                    '4112 LT',
+                    'Beusichem',
+                    '0623785160',
+                    'cheyennedominica@hotmail.com','2','2018-11-07',NULL,'0','0')
+20190611 11:37:08;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:37:40;leden;mwage;Waarde van geencontributie: 0
+20190611 11:37:40;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Tonnie',
+					'van',
+					'Schaik',
+					'',
+                    '',
+                    '',
+                    '',
+                    '','1','2019-01-01',NULL,'0','0')
+20190611 11:37:40;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:38:44;leden;mwage;Waarde van geencontributie: 0
+20190611 11:38:44;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Michel',
+					'',
+					'Schalken',
+					'Lagewaard 31',
+                    '4112 KA',
+                    'Beusichem',
+                    '0648565124',
+                    'mschalleke@hotmail.com','3',NULL,NULL,'0','0')
+20190611 11:38:44;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:40:05;leden;mwage;Waarde van geencontributie: 0
+20190611 11:40:05;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Ellis',
+					'van',
+					'Silfhout',
+					'Ridder van Tuylstraat 13',
+                    '4158 GJ',
+                    'Deil',
+                    '0636397276',
+                    'm.silfhout2@upcmail.nl','3','2019-01-01',NULL,'0','0')
+20190611 11:40:05;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:41:06;leden;mwage;Waarde van geencontributie: 0
+20190611 11:41:06;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Remco',
+					'',
+					'Stap',
+					'Dwarsstraat 12',
+                    '4115 RW',
+                    'Asch',
+                    '0345 502260',
+                    'remcostap2005@gmail.com','3','2019-05-20',NULL,'0','0')
+20190611 11:41:06;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:42:11;leden;mwage;Waarde van geencontributie: 0
+20190611 11:42:11;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Sander',
+					'de',
+					'Vaal',
+					'Betsy Perkweg 3',
+                    '4105 EE',
+                    'Culemborg',
+                    '0611165910',
+                    'sanbro@live.nl','3','2018-10-01',NULL,'0','0')
+20190611 11:42:12;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:43:13;leden;mwage;Waarde van geencontributie: 0
+20190611 11:43:13;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Marvin',
+					'',
+					'Verbeek',
+					'Fazant 13',
+                    '4021 JA',
+                    'Maurik',
+                    '0623972940',
+                    'marvinverbeek@gmail.com','2','2019-05-27',NULL,'0','0')
+20190611 11:43:13;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:44:35;leden;mwage;Waarde van geencontributie: 0
+20190611 11:44:35;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Jesse',
+					'',
+					'Verkerk',
+					'J. Bosschaartstraat 20',
+                    '4112 LN',
+                    'Beusichem',
+                    '0638755925',
+                    'jesse-verkerk@hotmail.com','1','2018-08-11',NULL,'0','0')
+20190611 11:44:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 11:45:47;leden;mwage;Waarde van geencontributie: 0
+20190611 11:45:47;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Peter',
+					'',
+					'Vernooij',
+					'Donkerstraat 19',
+                    '4119 LX',
+                    'Ravenswaay',
+                    '0636308408',
+                    'petervernooij7@gmail.com','1','2018-10-18',NULL,'0','0')
+20190611 11:45:47;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 12:22:57;leden;mwage;Waarde van geencontributie: 0
+20190611 12:22:57;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Romy',
+					'',
+					'Vink',
+					'Bachlaan 15',
+                    '4102 BP',
+                    'Culemborg',
+                    '0681157001',
+                    'romy-vink-dec@hotmail.com','1','2018-10-26',NULL,'0','0')
+20190611 12:22:57;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 12:23:50;leden;mwage;Waarde van geencontributie: 0
+20190611 12:23:50;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Jeroen',
+					'',
+					'Vink',
+					'Bachlaan 15',
+                    '4102 BP',
+                    'Culemborg',
+                    '0652835137',
+                    'jeroen-marco-vink@hotmail.com','3','2018-07-16',NULL,'0','0')
+20190611 12:23:50;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 12:24:38;leden;mwage;Waarde van geencontributie: 0
+20190611 12:24:38;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Jasper',
+					'',
+					'Vink',
+					'Bachlaan 15',
+                    '4102 BP',
+                    'Culemborg',
+                    '',
+                    'jasper-vink@hotmail.com','1','2018-08-16',NULL,'0','0')
+20190611 12:24:38;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 12:25:39;leden;mwage;Waarde van geencontributie: 0
+20190611 12:25:39;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Lucie',
+					'',
+					'Wall',
+					'Appeldijk 4',
+                    '4158 ES',
+                    'Deil',
+                    '0643227546',
+                    'luciewall2000@gmail.com','3','2019-01-01',NULL,'0','0')
+20190611 12:25:39;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 12:26:26;leden;mwage;Waarde van geencontributie: 0
+20190611 12:26:26;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Wouter',
+					'',
+					'Wennekes',
+					'',
+                    '',
+                    '',
+                    '0638985632',
+                    'wm.wennekes@hotmail.com','1','2018-08-06',NULL,'0','0')
+20190611 12:26:26;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 12:32:22;leden;mwage;Waarde van geencontributie: 0
+20190611 12:32:22;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Jory',
+					'van',
+					'Zanten',
+					'Burg. Kuykstraat 39',
+                    '4112 LH',
+                    'Beusichem',
+                    '0641237717',
+                    'jory_van_zanten@hotmail.com','1','2019-01-11',NULL,'0','0')
+20190611 12:32:22;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:21:04;leden;mwage;Waarde van geencontributie: 0
+20190611 13:21:04;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Ruben',
+					'van',
+					'Zanten',
+					'Beijerdstraat 6',
+                    '4112 NE',
+                    'Beusichem',
+                    '0657998466',
+                    'rubenvanzanten@hotmail.com','1','2019-01-10',NULL,'0','0')
+20190611 13:21:04;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:22:02;leden;mwage;Waarde van geencontributie: 0
+20190611 13:22:02;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Davy',
+					'van',
+					'Zetten',
+					'Schaardijkseweg 23',
+                    '4111 PA',
+                    'Zoelmond',
+                    '0636177571',
+                    '','1','2019-01-10',NULL,'0','0')
+20190611 13:22:02;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:23:37;leden;mwage;Waarde van geencontributie: 0
+20190611 13:23:37;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Paulien',
+					'van',
+					'Zomeren',
+					'Kerkstraat 5a',
+                    '',
+                    'Asch',
+                    '',
+                    '','2','2018-10-01',NULL,'0','0')
+20190611 13:23:37;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:23:55;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190611 13:24:48;leden;mwage;Waarde van geencontributie: 0
+20190611 13:24:48;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Dennis',
+					'',
+					'BosschaartDenekamp',
+					'Achterstraat 10a',
+                    '4115 RP',
+                    'Asch',
+                    '',
+                    'dennisdenekamp@hotmail.com',NULL,'2018-09-05','2018-12-01','0','0')
+20190611 13:24:48;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:24:52;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190611 13:25:05;leden;mwage;Waarde van uitschrijfdatum : *2018-12-01*
+20190611 13:25:05;leden;mwage;UPDQUERY UPDATE-query: UPDATE leden SET 
+	        voornaam = 'Dennis',
+		    tussenvoegsel = '',
+		    achternaam = 'BosschaartDenekamp',
+            adres = 'Achterstraat 10a',
+            postcode = '4115 RP',
+            woonplaats = 'Asch',
+            telefoonnummer = '0630720596',
+            emailadres = 'dennisdenekamp@hotmail.com',
+            abonnementID = Abonnement onbekend,inschrijfdatum = '2018-09-05',uitschrijfdatum = '2018-12-01',geencontributie = '0', sleutel = '0' WHERE ID = 56
+20190611 13:25:05;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:26:17;leden;mwage;Waarde van geencontributie: 0
+20190611 13:26:17;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Chris',
+					'van',
+					'Wiggen',
+					'Bijenstraat 7',
+                    '4105 DX',
+                    'Culemborg',
+                    '0619064291',
+                    'chrisvanwiggen@icloud.com','1','2018-09-24','2019-01-30','0','0')
+20190611 13:26:17;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:27:28;leden;mwage;Waarde van geencontributie: 0
+20190611 13:27:28;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Jerney',
+					'van',
+					'Wessel',
+					'Rietveldseweg 21A',
+                    '4107 LJ',
+                    'Culemborg',
+                    '0640803144',
+                    'jerney1997@hotmail.com','1','2018-11-19','2018-12-01','0','0')
+20190611 13:27:28;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:28:48;leden;mwage;Waarde van geencontributie: 0
+20190611 13:28:48;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Mike',
+					'van der',
+					'Ven',
+					'Rijnbandijk 205',
+                    '4023 AJ',
+                    'Culemborg',
+                    '0639723455',
+                    'mikevanderven@hotmail.com','1','2018-12-05','2019-05-01','0','0')
+20190611 13:28:48;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:29:32;leden;mwage;Waarde van geencontributie: 0
+20190611 13:29:32;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Gerben',
+					'van',
+					'Dijk',
+					'',
+                    '',
+                    '',
+                    '',
+                    '','1','2019-01-25','2019-02-28','0','0')
+20190611 13:29:32;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:30:54;leden;mwage;Waarde van geencontributie: 0
+20190611 13:30:54;leden;mwage;UPDQUERY INSERT-query: INSERT INTO leden (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, telefoonnummer, emailadres,
+            abonnementID, inschrijfdatum, uitschrijfdatum, geencontributie, sleutel)
+			VALUES ('Johan',
+					'van den',
+					'Broek',
+					'Schaardijkseweg 23',
+                    '4111 PA',
+                    'Zoelmond',
+                    '0646508507',
+                    'johvdbro@hotmail.com','1','2019-01-29','2019-04-01','0','0')
+20190611 13:30:54;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:34:46;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190611 13:34:52;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190611 13:34:54;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:35:43;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:47:20;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:48:45;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 13:52:36;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;
+20190611 13:52:38;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;
+20190611 13:52:40;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 19:29:33;index;mwage;Query: SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;
+20190611 19:31:10;login;mwage;User mwage is succesvol ingelogd.
+20190611 19:32:22;betaalperiode;mwage;Er worden 13 records uit betalingen verwijderd
+20190611 19:32:35;betaalperiode;mwage;BTNSAVE Op save gedrukt om gewijzigd record op te slaan
+20190611 19:32:35;betaalperiode;mwage;UPDQUERY INSERT-query: INSERT INTO betaalperiode (betaalperiode)
+			VALUES ('201906')
+20190611 19:32:35;betaalperiode;mwage;Insert betaling voor betaalperiodeID: 19
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('2', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('3', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('7', '19', '16.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('11', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('12', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('13', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('14', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('15', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('17', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('18', '19', '16.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('19', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('20', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('21', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('22', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('23', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('24', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('25', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('29', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('30', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('31', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('32', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('36', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('37', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('38', '19', '16.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('39', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('44', '19', '16.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('45', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('46', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('47', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('49', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('51', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('52', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('53', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('54', '19', '23.00')
+20190611 19:32:35;betaalperiode;mwage;INSERT-query betalingen: INSERT INTO betalingen (ledenID, betaalperiodeID, contributiebedrag) 
+                    VALUES ('55', '19', '16.00')
