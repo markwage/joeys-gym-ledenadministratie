@@ -20,7 +20,7 @@ include ("header.php");
 
 ?>
 <div id="main">		
-	<h1>Aktieve leden</h1>
+	<h1>Ledenadministratie</h1>
 			
 <?php 
 //------------------------------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ if (isset($_POST['cancel'])) {
     if (!isset($_SESSION['admin']) || (!$_SESSION['admin'])) {
         header("location: index.php");
     } else {
-        header("location: leden.php?aktie=dispAktief");
+        header("location: leden.php?aktie=dispAktiefOnbeperkt");
     }
 }
 
@@ -47,7 +47,7 @@ if (isset($_POST['delete'])) {
 	$lidID = $_POST['lidID'];
 	$sql_dellid = mysqli_query($dbconn, "DELETE FROM leden WHERE ID = $lidID");
 	writeLogRecord("leden","Lid ".$lidID." is succesvol verwijderd.");
-	header("location: leden.php?aktie=dispAktief");
+	header("location: leden.php?aktie=dispAktiefOnbeperkt");
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -126,14 +126,24 @@ if ( (isset($_POST['save'])) || (isset($_POST['submit']))) {
 //------------------------------------------------------------------------------------------------------
 // START 
 //------------------------------------------------------------------------------------------------------
-if (($aktie == 'dispAktief') || ($aktie == 'dispInaktief') || ($aktie == 'dispGeenContr') || ($aktie == 'dispSleutel')) {
-    if ($aktie == 'dispAktief') {
-        $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
+if (($aktie == 'dispAktiefOnbeperkt') || ($aktie == 'dispAktiefEenmaal') || ($aktie == 'dispInaktief') || ($aktie == 'dispStripkrt') || ($aktie == 'dispGeenContr') || ($aktie == 'dispSleutel')) {
+    if ($aktie == 'dispAktiefOnbeperkt') {
+        $tableHeader = "Aktieve leden met onbeperkt abonnement";
+        $sql_select = "SELECT * FROM leden WHERE abonnementID = '1' AND geencontributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
+    } elseif ($aktie == 'dispAktiefEenmaal') {
+        $tableHeader = "Aktieve leden met eenmaal per week abonnement";
+        $sql_select = "SELECT * FROM leden WHERE abonnementID = '2' AND geencontributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
+    } elseif ($aktie == 'dispStripkrt') {
+        $tableHeader = "Leden met een strippenkaart";
+        $sql_select = "SELECT * FROM leden WHERE abonnementID = '3' AND geencontributie = '0' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
     } elseif ($aktie == 'dispInaktief') {
-        $sql_select = "SELECT * FROM leden WHERE geenContributie = '0' AND uitschrijfdatum IS NOT NULL ORDER BY achternaam;";
+        $tableHeader = "Uitgeschreven leden";
+        $sql_select = "SELECT * FROM leden WHERE uitschrijfdatum IS NOT NULL ORDER BY achternaam;";
     } elseif ($aktie == 'dispGeenContr') {
-        $sql_select = "SELECT * FROM leden WHERE geenContributie = '1' ORDER BY achternaam;";
+        $tableHeader = "Leden zonder contributie";
+        $sql_select = "SELECT * FROM leden WHERE geencontributie = '1' AND uitschrijfdatum IS NULL ORDER BY achternaam;";
     } elseif ($aktie == 'dispSleutel') {
+        $tableHeader = "Leden met een sleutel";
         $sql_select = "SELECT * FROM leden WHERE sleutel = '1' ORDER BY achternaam;";
     }
     writelogrecord("index","Query: ".$sql_select);
@@ -142,7 +152,7 @@ if (($aktie == 'dispAktief') || ($aktie == 'dispInaktief') || ($aktie == 'dispGe
         if(mysqli_num_rows($sql_result) > 0) {
             echo "<center><table>";
             echo "<tr>";
-            echo "<th colspan='9' style='text-align:center;'>Overzicht leden</th>";
+            echo "<th colspan='9' style='text-align:center;'>".$tableHeader."</th>";
             echo "</tr>";
             echo "<tr>";
             echo "<th>lidnr</th>";
